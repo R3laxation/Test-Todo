@@ -10,14 +10,16 @@ export const Project = () => {
     const projects = useAppSelector<ProjectType[]>(selectProjects);
 
     const mappedProjects = projects.map(({id, title, addedDate}) => (
-        <Link to={`/project/${id}`} className={styles.project}>
+        <Link to={`/project/${id}`} className={styles.project} key={id}>
             <h3>{title}</h3>
             <h4>{addedDate}</h4>
         </Link>
     ))
 
     return (
-        {mappedProjects}
+        <>
+            {mappedProjects}
+        </>
     );
 };
 
