@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import styles from './Project.module.scss';
-import {useAppSelector} from "../../../bll/slices/store";
-import {selectProjects} from "../../../bll/slices/projects/selectors";
-import {ProjectType} from "../../../bll/slices/projects/types";
+import styles from './Projects.module.scss';
+import {useAppSelector} from "../../bll/slices/store";
+import {selectProjects} from "../../bll/slices/projects/selectors";
+import {ProjectType} from "../../bll/slices/projects/types";
 
-export const Project = () => {
+export const Projects = () => {
 
     const projects = useAppSelector<ProjectType[]>(selectProjects);
 
@@ -17,9 +17,9 @@ export const Project = () => {
     ))
 
     return (
-        <>
+        <div className={styles.projects}>
             {mappedProjects}
-        </>
+        </div>
     );
 };
 

@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './Projects.module.scss';
+import styles from './Main.module.scss';
 import {Input} from "../../components/input/Input";
 import {Button} from "../../components/button/Button";
-import {Project} from "./project/Project";
+import { Projects } from '../../components/projects/Projects';
 
-export const Projects = () => {
+export const Main = () => {
     return (
             <div className={styles.projects}>
                 <div className={styles.addForm}>
                     <Input/>
                     <Button>Add Project</Button>
                 </div>
-                <Project/>
+                <Projects/>
             </div>
     );
 };
