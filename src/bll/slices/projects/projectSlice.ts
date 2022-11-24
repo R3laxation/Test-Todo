@@ -1,9 +1,9 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {ProjectsType} from "./types";
+import {ProjectType} from "./types";
 
 export const projectsSlice = createSlice({
     name: 'projects',
-    initialState: [] as Array<ProjectsType>,
+    initialState: [] as Array<ProjectType>,
     reducers: {
 
     },
