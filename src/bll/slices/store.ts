@@ -1,11 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-
+import projectsReducer from "./projects/projectSlice";
 
 const rootReducer = combineReducers({
-
+        projects: projectsReducer
 });
-
 
 export const store = configureStore({
     reducer: rootReducer,
@@ -17,6 +16,5 @@ export type AppRootStateType = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch: () => AppDispatch = useDispatch;
-
 
 export const useAppSelector: TypedUseSelectorHook<AppRootStateType> = useSelector;
