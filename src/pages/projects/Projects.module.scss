@@ -1,5 +1,17 @@
+.projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.addForm{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
 .project{
-  max-width: 400px;
+  max-width: 200px;
   display: inline-block;
   padding: 32px;
   text-decoration: none;
