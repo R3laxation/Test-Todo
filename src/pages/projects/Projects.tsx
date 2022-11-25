@@ -11,10 +11,7 @@ export const Projects = () => {
                     <Input/>
                     <Button>Add Project</Button>
                 </div>
-                <Link to={`/project/`} className={styles.project}>
-                    <h3>Title</h3>
-                    <h4>Added Date</h4>
-                </Link>
+
             </div>
     );
 };
