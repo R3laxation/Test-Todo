@@ -1,9 +1,9 @@
 import React from 'react';
-import style from './Header.module.scss';
+import styles from './Header.module.scss';
 
 export const Header = () => {
     return (
-        <div className={style.header}>
+        <div className={styles.header}>
             <h1>Daily projects</h1>
         </div>
     );

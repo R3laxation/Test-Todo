@@ -1,13 +1,13 @@
 import React from 'react';
 import {Header} from "../components/header/Header";
 import {Outlet} from "react-router-dom";
-import style from './MainLayout.module.scss';
+import styles from './MainLayout.module.scss';
 
 export const MainLayout = () => {
     return (
         <>
             <Header/>
-            <div className={style.content}>
+            <div className={styles.content}>
                 <Outlet/>
             </div>
         </>
