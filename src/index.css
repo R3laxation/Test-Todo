@@ -7,6 +7,7 @@
 :root{
   --color-primary: #009579;
   --color-primary-light: #0affd2;
+  --color-text: #F1F0EA;
 }
 
 body {

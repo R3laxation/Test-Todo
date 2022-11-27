@@ -1,4 +1,7 @@
 .header{
-  //height: 100vh;
-  background: linear-gradient(to bottom rigth, var);
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
+  color: var(--color-text);
 }
