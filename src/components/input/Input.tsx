@@ -30,7 +30,7 @@ export const Input: React.FC<InputTextPropsType> = (
 
 
     const finalSpanClassName = `${error ? styles.error : ''} ${spanClassName}`
-    const finalInputClassName = `${className} ${styles.superInput} ${error ? styles.errorInput : ''}`
+    const finalInputClassName = `${className} ${styles.Input} ${error ? styles.errorInput : ''}`
 
     return (
         <>
