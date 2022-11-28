@@ -1,10 +1,11 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {AppStateType} from "./types";
 
-const slice = createSlice({
+const appSlice = createSlice({
     name: 'app',
     initialState: {
         isLoading: false,
-    } as InitialStateType,
+    } as AppStateType,
     reducers: {
         setIsLoading(state, action: PayloadAction<{ loading: boolean }>) {
             state.isLoading = action.payload.loading;
@@ -12,8 +13,5 @@ const slice = createSlice({
     },
 });
 
-type InitialStateType = {
-    isLoading: boolean;
-};
-export const appSlice = slice.reducer;
-export const { setIsLoading } = slice.actions;
+export default appSlice.reducer;
+export const { setIsLoading } = appSlice.actions;

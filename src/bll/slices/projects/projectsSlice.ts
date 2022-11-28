@@ -1,6 +1,6 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ProjectType} from "./types";
-
+import {setIsLoading} from "../app/appSlice";
 
 export const projectsSlice = createSlice({
     name: 'projects',
@@ -14,9 +14,19 @@ export const projectsSlice = createSlice({
         {id: '7', title: 'Third main', addedDate: '25.11.2022'},
     ] as Array<ProjectType>,
     reducers: {
-
+        addPack(state, action: PayloadAction<{ id: string, title: string; addedDate: string }>) {
+            setIsLoading({loading: true});
+            setTimeout(()=>{
+                state.push(action.payload);
+                setIsLoading({loading: false});
+            }, 1000);
+        },
     },
-    extraReducers:{}
+
 });
+
+export const {
+    addPack
+} = projectsSlice.actions;
 
 export default projectsSlice.reducer;
