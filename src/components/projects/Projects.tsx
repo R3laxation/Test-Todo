@@ -8,6 +8,7 @@ import {ProjectType} from "../../bll/slices/projects/types";
 export const Projects = () => {
 
     const projects = useAppSelector<ProjectType[]>(selectProjects);
+    console.log(projects)
 
     const mappedProjects = projects.map(({id, title, addedDate}) => (
         <Link to={`/project/${id}`} className={styles.project} key={id}>

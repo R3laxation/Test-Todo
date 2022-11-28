@@ -1,6 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ProjectType} from "./types";
-import {setIsLoading} from "../app/appSlice";
 
 export const projectsSlice = createSlice({
     name: 'projects',
@@ -15,14 +14,9 @@ export const projectsSlice = createSlice({
     ] as Array<ProjectType>,
     reducers: {
         addPack(state, action: PayloadAction<{ id: string, title: string; addedDate: string }>) {
-            setIsLoading({loading: true});
-            setTimeout(()=>{
-                state.push(action.payload);
-                setIsLoading({loading: false});
-            }, 1000);
+            state.push(action.payload);
         },
     },
-
 });
 
 export const {
