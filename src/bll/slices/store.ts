@@ -2,10 +2,12 @@ import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import projectsReducer from "./projects/projectsSlice";
 import tasksReducer from "./tasks/tasksSlice";
+import appReducer from "./app/appSlice";
 
 const rootReducer = combineReducers({
         projects: projectsReducer,
-        tasks: tasksReducer
+        tasks: tasksReducer,
+        app: appReducer
 });
 
 export const store = configureStore({
