@@ -1,8 +1,9 @@
 .projects{
-  background-color: red;
+  //background-color: red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: center;
+  justify-items: left;
+  grid-gap: 10px;
 }
 
 

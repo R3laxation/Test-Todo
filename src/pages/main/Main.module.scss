@@ -1,4 +1,4 @@
-.projects{
+.main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,5 +8,6 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  margin-bottom: 20px;
 }
 

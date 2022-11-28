@@ -6,7 +6,7 @@ import { Projects } from '../../components/projects/Projects';
 
 export const Main = () => {
     return (
-            <div className={styles.projects}>
+            <div className={styles.main}>
                 <div className={styles.addForm}>
                     <Input/>
                     <Button>Add Project</Button>
